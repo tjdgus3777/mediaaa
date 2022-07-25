@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        })
+    </script>
+    <style>
+        * { margin: 0; padding: 0; list-style: none; }
+        header { width: 1000px; height: 100px; line-height: 100px; text-align: center; margin: auto; border: 1px solid #000; border-radius: 10px;  }
+        #logo { width: 80px; height: 40px; background-color: tomato;  color: #fff; text-align: center; line-height: 40px; margin-top: 30px; float: left;}
+        #menu { width: 600px; height: 40px; line-height: 40px; position: absolute; left: 0; right: 0; margin: auto; top: 30px; text-align: center;}
+        #menu>li { display: inline-block;  margin:0 10px;}
+        #icon { float: right; margin-top: 35px; }
+        #icon>li { width: 30px; height: 30px; border-radius: 30px; border: 1px solid #000; float: left; margin-left: 10px; text-align: center; line-height: 30px; }
+
+
+
+        #content_wrap { width: 1000px; overflow: hidden; line-height: 400px; text-align: center; margin:10px auto; background-color: aqua;  }
+        #lnb { width: 20%; height: 400px; border-radius: 10px; border: 1px solid #000; box-sizing: border-box; float: left;}
+        #content { width: 56%; height: 400px; border-radius: 10px; border: 1px solid #000; box-sizing: border-box; float: left; margin:0 2%;}
+        #aside { width: 20%; height: 400px; border-radius: 10px;border: 1px solid #000; box-sizing: border-box; float: left;}
+        footer { width: 1000px; height: 100px; line-height: 100px; text-align: center; margin: auto; border: 1px solid #000; border-radius: 10px;  }
+
+    </style>
+    <style>
+        @media all and (min-width:320px){  /* 320~767 모바일 */
+            header { width: 95%; }
+            #content_wrap { width: 95%; }
+            footer { width: 95%; }
+            #lnb { width: 100%; height: 100px; line-height: 100px;}
+            #content { width: 100%; margin:10px 0 0 0; height: 100px; line-height: 100px;}
+            #aside { width: 100%; height: 100px; line-height: 100px; margin-top: 10px;}
+            #menu { display: none; }
+            #icon>li:nth-child(3) { display: none; }
+
+
+         }
+        @media all and (min-width:768px){ /* 768~1023 태블릿*/  
+            header { width: 90%; }
+            #content_wrap { width: 90%; }
+            footer { width: 90%; }
+            #lnb { width: 30%; height: 290px; line-height: 300px;}
+            #content { width: 68%; margin: 0 0 0 2%; height: 290px; line-height: 300px;}
+            #aside { width: 100%; height: 100px; line-height: 100px; margin-top: 10px;}
+            #menu { display: none; }
+            #icon>li:nth-child(3) { display: block; }
+
+
+        }
+        @media all and (min-width:1024px){ /* 1024~1599 노트북*/
+             header { width: 1000px; }
+             #content_wrap { width: 1000px; }
+             footer { width: 1000px; }
+             #lnb { width: 20%; height: 400px; line-height: 400px;}
+             #content { width: 56%; margin:0 2%; height: 400px; line-height: 400px;}
+             #aside { width: 20%; height: 400px; line-height: 400px; margin-top: 0;}
+             #menu { display: block; }
+             #icon>li:nth-child(3) { display: block; }
+             
+
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="logo">logo</h1>
+        <ul id="menu">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+        <ul id="icon">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </header>
+    <div id="content_wrap">
+        <div id="lnb">lnb</div>
+        <div id="content">content</div>
+        <div id="aside">aside</div>
+    </div>
+    <footer>footer</footer>
+</body>
+</html>
